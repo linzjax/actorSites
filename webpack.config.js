@@ -1,5 +1,5 @@
 var path = require('path'),
-    ExtractTextPlugin = require('extract-text-webpack-plugin')
+    ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -7,7 +7,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'public'),
-        publicPath: '',
+        publicPath: '/',
         filename: 'bundle.js'
     },
     module: {
@@ -26,12 +26,7 @@ module.exports = {
             // SASS/SCSS
             {
                 test: /\.(sass|scss)$/,
-                loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader')
-            },
-            // LESS
-            {
-                test: /\.less$/,
-                loader: ExtractTextPlugin.extract('style-loader', 'css-loader!less-loader')
+                loader: ExtractTextPlugin.extract('style-loader', 'css-loader?-minimize!sass-loader')
             },
             // Json
             {
@@ -40,18 +35,9 @@ module.exports = {
             },
             // Images
             {
-                test: /\.jpe?g$|\.gif$|\.png$|\.svg$/i, 
+                test: /\.jpe?g$|\.gif$|\.png$|\.svg$/i,
                 loader: 'file'
             },
-            // Fonts
-            { 
-                test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
-                loader: "url-loader?limit=10000&minetype=application/font-woff" 
-            },
-            {
-                test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
-                loader: "file-loader" 
-            }
         ]
     },
     resolve: {
@@ -59,6 +45,7 @@ module.exports = {
         modulesDirectories: [
             'node_modules',
             'resources',
+            'static',
             'app'
         ],
         extensions: ['.js', '.json', '']

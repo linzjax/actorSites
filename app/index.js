@@ -1,1 +1,2 @@
-index.js
+'use strict';
+import 'styles/styles.scss';
