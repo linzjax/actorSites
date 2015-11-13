@@ -53,7 +53,22 @@
 
 	'use strict';
 
+	//document.addEventListener('load', function(){
+
+	//});
+
 	__webpack_require__(2);
+
+	document.getElementById('about').addEventListener('click', function (e) {
+		e.preventDefault();
+		console.log(document.getElementsByClassName('bio-box')[0]);
+		document.getElementsByClassName('bio-box')[0].classList.remove('hidden');
+	});
+
+	document.getElementById('name-link').addEventListener('click', function (e) {
+		e.preventDefault();
+		document.getElementsByClassName('bio-box')[0].classList.add('hidden');
+	});
 
 /***/ },
 /* 2 */

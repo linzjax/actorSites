@@ -2,7 +2,7 @@
   box-sizing: border-box; }
 
 body {
-  font-size: 20px;
+  font-size: 25px;
   width: auto;
   max-width: 100%;
   padding: 0;
@@ -52,22 +52,44 @@ header {
         header .navigation nav a:hover {
           color: black; }
 
-.name {
-  display: flex;
-  flex-flow: column;
-  width: 100%;
-  margin-top: -10px; }
-  .name h1 {
-    margin: 5%;
-    font-size: 2.5em;
-    color: white;
-    text-shadow: 2px 2px grey; }
-    .name h1 .firstname {
-      width: 50%;
-      float: left; }
-    .name h1 .lastname {
-      width: 50%;
-      float: right; }
+.container {
+  margin: 20px;
+  width: 100%; }
+  .container .name {
+    display: flex;
+    flex-flow: column;
+    width: 50%;
+    margin-top: -10px; }
+    .container .name a {
+      text-decoration: none;
+      color: white; }
+    .container .name h1 {
+      margin: 5%;
+      font-size: 2.5em;
+      color: white;
+      text-shadow: 2px 2px grey; }
+      .container .name h1 .firstname {
+        width: 50%;
+        float: left; }
+      .container .name h1 .lastname {
+        width: 50%;
+        float: right; }
+  .container .bio-box {
+    width: 90%;
+    margin-top: 0;
+    margin-bottom: 40px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(255, 255, 255, 0.3);
+    border: 1px solid grey;
+    transition: all 1s; }
+    .container .bio-box .bio-text {
+      margin: 20px;
+      font-size: 1em; }
+    .container .bio-box.hidden {
+      height: 0;
+      overflow: none;
+      opacity: 0; }
 
 @media only screen and (min-width: 480px) {
   body {
@@ -87,7 +109,13 @@ header {
       margin-right: 20px; }
   header .backdrop {
     background-image: url(/00af70a4e92bce8d988766bccc7a03f1.jpg); }
-  .name {
+  .container .name {
     width: 40%; }
-    .name h1 {
-      font-size: 3em; } }
+    .container .name h1 {
+      font-size: 3em; }
+  .container .bio-box {
+    width: 90%; } }
+
+@media only screen and (min-width: 1072px) {
+  .container .bio-box {
+    width: 40%; } }

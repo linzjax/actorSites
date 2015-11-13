@@ -4,7 +4,7 @@
 
 
 body {
-	font-size: 20px;
+	font-size: 25px;
 	width: auto;
 	max-width: 100%;
 	padding: 0;
@@ -66,29 +66,75 @@ header {
 	}
 }
 
-.name {
-	display: flex;
-	flex-flow: column;
+
+.container {
+	margin: 20px;
 	width: 100%;
-	margin-top: -10px;
-	h1 {
-		margin: 5%;
-		font-size: 2.5em;
-		color: white;
-		text-shadow: 2px 2px grey;
 
-		.firstname {
-			width: 50%;
-			float: left;
+	.name {
+		display: flex;
+		flex-flow: column;
+		width: 50%;
+		margin-top: -10px;
+		a {
+			text-decoration: none;
+			color: white;
+		}
+		h1 {
+			margin: 5%;
+			font-size: 2.5em;
+			color: white;
+			text-shadow: 2px 2px grey;
 
+			.firstname {
+				width: 50%;
+				float: left;
+
+			}
+
+			.lastname {
+				width: 50%;
+				float: right;
+			}
+		}
+	}
+
+
+	.bio-box {
+		width: 90%;
+		margin-top: 0;
+		margin-bottom: 40px;
+		background-color: rgba(255,255,255,0.6);
+		border-radius: 5px;
+		box-shadow: 0 10px 10px rgba(255,255,255,0.3);
+		border: 1px solid grey;
+		transition: all 1s;
+
+		.bio-text {
+			margin: 20px;
+			font-size: 1em;
 		}
 
-		.lastname {
-			width: 50%;
-			float: right;
+		&.hidden {
+			height: 0;
+			overflow: none;
+			opacity: 0;
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media only screen and (min-width:480px)   {
 	body {
 		font-size: 25px;
@@ -131,15 +177,34 @@ header {
 
 		}
 	}
+	.container {
+		.name {
+			width: 40%;
+			h1 {
+				font-size: 3em;
+			}
+		}
 
-	.name {
-		width: 40%;
-		h1 {
-			font-size: 3em;
+		.bio-box {
+			width: 90%;
+			
+		// 	float: right;
+		// 	position: absolute;
 		}
 	}
 }
 
+@media only screen and (min-width:1072px)   {
+	.container {
+
+		.bio-box {
+			width: 40%;
+			
+		// 	float: right;
+		// 	position: absolute;
+		}
+	}
+}
 
 
 
