@@ -208,6 +208,39 @@ header {
 				margin: auto;
 			}
 		}
+
+		.gallery-box {
+			width: 100%;
+			height: 100%;
+			padding: 0 auto;
+			.gallery-images {
+				width: 90%;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-content: flex-start;
+				margin: 0 auto;
+				padding: 0 auto;
+				.image {
+
+					width: 400px;
+					height: 400px;
+					overflow: hidden;
+					position: relative;
+					margin: 20px;
+					margin-top: 0;
+					border: 4px solid white;
+					img {
+						width:100%;
+						position: absolute;
+						bottom: 0;
+					}
+				}
+			}
+		}
+
+
 	}
 
 
