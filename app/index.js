@@ -15,13 +15,21 @@ document.getElementById('name-link').addEventListener('click', function(e){
 });
 
 var images = document.getElementsByClassName('image');
-
 var imagesArray = Array.prototype.slice.call(images);
+
+var $lightbox = document.getElementsByClassName('gallery-lightbox')[0];
 
 imagesArray.forEach(function(image){
 	image.addEventListener('click', function(e){
-		console.log(image.childNodes[1].getAttribute('src'));
+		var src = image.childNodes[1].getAttribute('src');
+		$lightbox.childNodes[1].childNodes[1].setAttribute('src', src);
+		$lightbox.classList.remove('hidden');
 	});
+});
+
+
+$lightbox.addEventListener('click', function(e){
+	$lightbox.classList.add('hidden');
 });
 
 //});
