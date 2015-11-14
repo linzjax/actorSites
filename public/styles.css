@@ -75,35 +75,30 @@ header {
 
 .container {
   width: 100%;
-  background-color: rgba(200, 200, 200, 0.5);
-  padding-top: 40px; }
-  .container .bio-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid grey; }
+  .container .bio-box h2 {
+    color: grey;
+    text-shadow: 2px 2px 2px black; }
+  .container .bio-box .bio-insides {
     width: 90%;
     margin: 0 auto;
     margin-bottom: 40px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.2);
     border-radius: 5px;
-    box-shadow: 0 10px 10px rgba(255, 255, 255, 0.3);
-    border: 1px solid grey;
-    height: 100%;
-    -webkit-transition: opacity 1s, height 1s, visibility 1s, overflow 1s, -webkit-transform 1s;
-    transition: opacity 1s, height 1s, visibility 1s, overflow 1s, transform 1s; }
-    .container .bio-box .bio-text {
-      margin: 20px;
+    box-shadow: 1px 10px 10px rgba(255, 255, 255, 0.1);
+    height: 100%; }
+    .container .bio-box .bio-insides .bio-text {
+      padding: 20px;
       font-size: 1em; }
-    .container .bio-box.hidden {
-      height: 0;
-      overflow: none;
-      opacity: 0; }
   .container .resume-box {
-    width: 100%;
     background-color: rgba(200, 200, 200, 0.7);
-    height: 1000px;
+    height: 800px;
     padding: auto;
-    padding-top: 5%;
-    text-align: right; }
+    text-align: right;
+    border: 2px solid grey; }
     .container .resume-box .resume-text {
-      width: 90%;
+      width: 100%;
       margin: auto; }
       .container .resume-box .resume-text img {
         width: 100%; }
@@ -118,7 +113,7 @@ header {
   .name h1 {
     font-size: 3em; }
   .container .resume-box {
-    height: 1000px; }
+    height: 900px; }
     .container .resume-box .resume-text {
       text-align: center;
       margin: auto; }

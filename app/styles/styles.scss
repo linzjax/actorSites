@@ -100,51 +100,49 @@ header {
 
 .container {
 	width: 100%;
-	background-color: rgba(200,200,200,0.5);
-	padding-top: 40px;
+	background-color: rgba(255,255,255,0.8);
+	//padding-top: 40px;
+	border: 2px solid grey;
 
 
 	.bio-box {
+		h2 {
+			color: grey;
+			text-shadow: 2px 2px 2px black;
+		}
+
+		.bio-insides {
+
 		//position: absolute;
 		width: 90%;
 		margin: 0 auto;
 		margin-bottom: 40px;
-		background-color: rgba(255,255,255,1);
+		background-color: rgba(255,255,255,0.2);
 		border-radius: 5px;
-		box-shadow: 0 10px 10px rgba(255,255,255,0.3);
-		border: 1px solid grey;
+		box-shadow: 1px 10px 10px rgba(255,255,255,0.1);
+		//border: 1px solid grey;
 		height: 100%;
-		-webkit-transition: opacity 1s, height 1s, visibility 1s, overflow 1s, -webkit-transform 1s;
-		transition: opacity 1s, height 1s, visibility 1s, overflow 1s, transform 1s;
+		
 
-		.bio-text {
-			margin: 20px;
-			font-size: 1em;
-		}
-
-		&.hidden {
-			height: 0;
-			overflow: none;
-			opacity: 0;
+			.bio-text {
+				padding: 20px;
+				font-size: 1em;
+			}
 		}
 	}
 
 	.resume-box {
-		width: 100%;
+		//width: 100%;
 		background-color: rgba(200,200,200,0.7);
-		height: 1000px;
+		height: 800px;
 		padding: auto;
-		padding-top: 5%;
+		//padding-top: 5%;
 		text-align: right;
+		border: 2px solid grey;
 
 		.resume-text {
-			width: 90%;
-
-			// background-color: white;
-			// border: solid 2px grey;
-			// height: 920px;
+			width: 100%;
 			margin: auto;
-			// border-radius: 5px;
 			img {
 				width: 100%;
 			}
@@ -188,7 +186,7 @@ header {
 
 	.container {
 		.resume-box {
-			height: 1000px;
+			height: 900px;
 			h2 {
 
 			}
@@ -239,9 +237,7 @@ header {
 
 		.resume-box {
 			height: 1300px;
-			h2 {
 
-			}
 			.resume-text {
 				text-align: center;
 				img {
