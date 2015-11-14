@@ -95,6 +95,16 @@ header {
 			}
 		}
 	}
+
+	.praise {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		h2 {
+			font-size: 1.5em;
+		}
+	}
 }
 
 
@@ -218,8 +228,8 @@ header {
 
 		.backdrop {
 			background-image: url('../../public/images/martin_miranda_medium.jpg');
-
 		}
+
 	}
 
 	.name {
@@ -232,6 +242,14 @@ header {
 }
 
 @media only screen and (min-width:780px)   {
+	header {
+		.praise {
+			width: 40%;
+				h2 {
+					font-size: 1.5em;
+				}
+			}
+	}
 	.container {
 		
 

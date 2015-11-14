@@ -72,6 +72,13 @@ header {
     header .name h1 .lastname {
       width: 50%;
       float: right; }
+  header .praise {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%; }
+    header .praise h2 {
+      font-size: 1.5em; }
 
 .container {
   width: 100%;
@@ -134,6 +141,10 @@ header {
       font-size: 3em; } }
 
 @media only screen and (min-width: 780px) {
+  header .praise {
+    width: 40%; }
+    header .praise h2 {
+      font-size: 1.5em; }
   .container .resume-box {
     height: 1300px; }
     .container .resume-box .resume-text {
