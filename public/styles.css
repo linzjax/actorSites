@@ -88,17 +88,15 @@ header {
     color: grey;
     text-shadow: 2px 2px 2px black; }
   .container .bio-box {
-    height: 100vh; }
+    height: 90vh; }
     .container .bio-box .bio-insides {
-      height: 90%;
       width: 60%;
       max-height: 90%;
       margin: 0 auto;
       margin-bottom: 40px;
       background-color: rgba(255, 255, 255, 0.2);
       border-radius: 5px;
-      box-shadow: 1px 10px 10px rgba(255, 255, 255, 0.1);
-      height: 100%; }
+      box-shadow: 1px 10px 10px rgba(255, 255, 255, 0.1); }
       .container .bio-box .bio-insides .bio-text {
         padding: 20px;
         font-size: 1em; }
