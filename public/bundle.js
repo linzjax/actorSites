@@ -54,10 +54,34 @@
 	'use strict';
 
 	//document.addEventListener('load', function(){
-
-	//});
-
 	__webpack_require__(2);
+
+	var lightbox = function lightbox() {
+		var images = document.getElementsByClassName('image');
+		var imagesArray = Array.prototype.slice.call(images);
+
+		var $lightbox = document.getElementsByClassName('gallery-lightbox')[0];
+
+		imagesArray.forEach(function (image) {
+			image.addEventListener('click', function (e) {
+				var src = image.childNodes[1].getAttribute('src');
+				$lightbox.childNodes[1].childNodes[1].setAttribute('src', src);
+				$lightbox.classList.remove('hidden');
+			});
+		});
+
+		$lightbox.addEventListener('click', function (e) {
+			$lightbox.classList.add('hidden');
+		});
+	};
+
+	var scrolling = function scrolling() {
+		var $navbar = document.getElementsByClassName('navigation')[0];
+
+		window.onscroll = function () {
+			$navbar.style.position = 'fixed';
+		};
+	};
 
 	document.getElementById('about').addEventListener('click', function (e) {
 		e.preventDefault();
@@ -70,22 +94,12 @@
 		document.getElementsByClassName('bio-box')[0].classList.add('hidden');
 	});
 
-	var images = document.getElementsByClassName('image');
-	var imagesArray = Array.prototype.slice.call(images);
+	//});
 
-	var $lightbox = document.getElementsByClassName('gallery-lightbox')[0];
-
-	imagesArray.forEach(function (image) {
-		image.addEventListener('click', function (e) {
-			var src = image.childNodes[1].getAttribute('src');
-			$lightbox.childNodes[1].childNodes[1].setAttribute('src', src);
-			$lightbox.classList.remove('hidden');
-		});
-	});
-
-	$lightbox.addEventListener('click', function (e) {
-		$lightbox.classList.add('hidden');
-	});
+	document.addEventListener('load', (function () {
+		scrolling();
+		lightbox();
+	})());
 
 /***/ },
 /* 2 */
