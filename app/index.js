@@ -24,10 +24,31 @@ var lightbox = function(){
 
 var scrolling = function(){
 	var $navbar = document.getElementsByClassName('navigation')[0];
+	
+	if (document.body.scrollTop < 200){
+		$navbar.style.transition = 'none';
+		$navbar.classList.add('at-top');
+	}
 
 	window.onscroll = function(){
-		$navbar.style.position = 'fixed';
-	}
+		if (document.body.scrollTop < 200){
+			$navbar.style.transition = 'all 1s';
+			$navbar.classList.add('at-top');
+		} else {
+			$navbar.style.transition = 'all 1s';
+			$navbar.classList.remove('at-top');
+		}
+	};
+	
+	// if (has class at-top){
+	// 	$navbar.style.position = 'fixed';
+	// 	$navbar.style.backgroundColor = "rgba(255,255,255,0.5)";
+	// }
+
+	// window.onscroll = function(){
+	// 	$navbar.style.position = 'fixed';
+	// 	$navbar.style.backgroundColor = "rgba(255,255,255,1)";
+	// }
 };
 
 

@@ -37,10 +37,12 @@ header {
     background-image: url(/146c2b81e62d27dfdf30ef8218542a7f.jpg); }
   header .navigation {
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: white;
     height: 50px;
     box-shadow: 0 10px 10px rgba(255, 255, 255, 0.3);
-    border-bottom: 2px solid grey; }
+    border-bottom: 2px solid grey;
+    position: fixed;
+    z-index: 9999999; }
     header .navigation nav {
       width: 100%;
       position: absolute;
@@ -52,17 +54,28 @@ header {
       header .navigation nav a {
         text-decoration: none;
         font-size: 1em;
-        color: white;
+        color: black;
         text-shadow: 1px 1px grey;
-        transition: color .2s;
-        moz-transition: color .2s; }
+        transition: color 1s;
+        moz-transition: color 1s; }
         header .navigation nav a:hover {
-          color: black; }
+          color: grey; }
+  header .at-top {
+    background-color: rgba(255, 255, 255, 0.5); }
+    header .at-top a {
+      text-decoration: none;
+      font-size: 1em;
+      color: white !important;
+      text-shadow: 1px 1px grey;
+      transition: color 1s;
+      moz-transition: color 1s; }
+      header .at-top a:hover {
+        color: black !important; }
   header .name {
     display: flex;
     flex-flow: column;
     width: 50%;
-    margin-top: -10px; }
+    margin-top: 80px; }
     header .name a {
       text-decoration: none;
       color: white; }
